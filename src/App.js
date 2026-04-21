@@ -25,6 +25,14 @@ function App() {
   ]);
   console.log(posts);
 
+  let [count, setCount] = useState(0);
+
+  let increment = () => {
+    // setCount(count+1); //don't write like this 
+    setCount((prevState)=>prevState+1);//write like this 
+    setCount((prevState)=>prevState+1);//so you can write like this, it will work here. if you write count+1 it will not work it will work only +1+1.
+  }
+
   return (
     <div className="App">
       <h1>Hello Friend</h1>
@@ -32,11 +40,18 @@ function App() {
       <img src={Image} alt=''></img>
       <button onClick={changeName}>Change Name</button>
       <h1>Posts</h1>
-      <ul>
+      <div className='list'>
+        <ul>
         {posts.map((post)=>(
           <li key={post.id}>{post.title}</li>
         ))}
       </ul>
+      </div>
+      <div className='counterState'>
+        <h1>Counter</h1>
+        <h3>Count - {count}</h3>
+        <button onClick={increment}>Increment</button>
+      </div>
     </div>
   );
 }
