@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import Image from './assets/image.jpg';
+import { useState } from 'react';
 
 function App() {
-  let name = "Brian";
+  let [name, setName] = useState("Brian")
   let changeName = () => {
-    name = "Aung Naing";
+    setName("Aung Naing");
     console.log(name);
   }
   return (
