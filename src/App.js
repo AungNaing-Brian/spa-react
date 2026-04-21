@@ -3,10 +3,17 @@ import './App.css';
 import Image from './assets/image.jpg';
 
 function App() {
+  let name = "Brian";
+  let changeName = () => {
+    name = "Aung Naing";
+    console.log(name);
+  }
   return (
     <div className="App">
       <h1>Hello Friend</h1>
-      <img src={Image} alt='' height="80%" width="80%"></img>
+      <h2>This is {name}.</h2>
+      <img src={Image} alt=''></img>
+      <button onClick={changeName}>Change Name</button>
     </div>
   );
 }
