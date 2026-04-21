@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: aquamarine;
+  color: #282c34;
 }
 
 .App-logo {
@@ -35,4 +37,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App img {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
