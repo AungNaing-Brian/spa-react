@@ -1,5 +1,7 @@
 import './App.css';
 import { useState } from 'react';
+import Navbar from './components/Navbar/index';
+import Postslist from './components/Postslist';
 
 function App() {
   let [posts, setPosts] = useState([
@@ -18,7 +20,8 @@ function App() {
 
   return (
     <>
-
+      <Navbar></Navbar>
+      <Postslist post={posts}/>
     </>
   );
 }
