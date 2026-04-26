@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.css';
-export default function Navbar() {
+export default function Navbar({setShowModal}) {
   return (
     <nav>
         <div className='container'>
@@ -11,6 +11,9 @@ export default function Navbar() {
                 </li>
                 <li>
                     Posts
+                </li>
+                <li onClick={()=>setShowModal(true)}>
+                    Sing In
                 </li>
             </ul>
         </div>
