@@ -23,7 +23,10 @@ function App() {
     <>
       <Navbar></Navbar>
       <Postslist post={posts}/>
-      <Modal></Modal>
+      <Modal>
+        <h1>Zoom class is available now.</h1>
+        <p>Feel free to <a href='#'>Join</a> here.</p>
+      </Modal>
     </>
   );
 }

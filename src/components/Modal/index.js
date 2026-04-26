@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { Children } from 'react'
 import './index.css'
-export default function modal() {
+export default function modal({children}) {
   return (
     <div className='modal-backdrop'>
         <div className='modal'>
-            <h1>Zoom class is available now</h1>
-            <p>Feel free to <a href='#'>Join</a> here!</p>
+            {children}
         </div>
     </div>
   )
