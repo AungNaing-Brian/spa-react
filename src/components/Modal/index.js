@@ -1,6 +1,6 @@
-import React from 'react'
-
-export default function Model({children}) {
+import React, { Children } from 'react'
+import './index.css'
+export default function modal({children}) {
   return (
     <div className='modal-backdrop'>
         <div className='modal'>

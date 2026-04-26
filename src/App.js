@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import Navbar from './components/Navbar/index';
 import Postslist from './components/Postslist';
-import Model from './components/Model'
+import Modal from './components/Modal'
 
 function App() {
   let [posts, setPosts] = useState([
@@ -23,14 +23,10 @@ function App() {
     <>
       <Navbar></Navbar>
       <Postslist post={posts}/>
-      <Model>
-        <h1>
-          Terms and Coditions
-        </h1>
-        <p>
-          contents .......
-        </p>
-      </Model>
+      <Modal>
+        <h1>Zoom class is available now.</h1>
+        <p>Feel free to <a href='#'>Join</a> here.</p>
+      </Modal>
     </>
   );
 }
