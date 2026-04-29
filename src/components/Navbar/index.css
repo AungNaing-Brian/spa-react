@@ -1,9 +1,9 @@
-nav{
+.navbar-components nav{
     background-color: yellow;
     padding: 10px;
 }
 
-.container{
+.navbar-components .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,11 +11,11 @@ nav{
     margin: auto;
 }
 
-.container ul{
+.navbar-components .container ul{
     display: flex;
 }
 
-.container li{
+.navbar-components .container li{
     list-style-type: none;
     margin: 0 20px;
 }
