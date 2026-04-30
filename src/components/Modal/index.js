@@ -1,15 +1,21 @@
-import React, { Children } from "react";
-import "./index.css";
-import ReactDom from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom';
+import './index.css';
 
-export default function modal({ children }) {
-  return ReactDom.createPortal(
+export default function Modal({children, danger = false}) {
+  return (
+    ReactDOM.createPortal(
     <div className="modal-component">
       <div className="modal-backdrop">
-      <div className="modal">{children}</div>
+          <div className="modal" style={{
+            border : '4px solid',
+            borderColor : danger ? 'red' : 'blue'
+          }}>
+             {children}
+          </div>
+      </div>
     </div>,
-    document.getElementById("modal"),
-    </div>
-    
-  );
+    document.getElementById('modal')
+    )
+  )
 }
