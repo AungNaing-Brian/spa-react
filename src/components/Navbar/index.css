@@ -1,15 +1,9 @@
 nav{
-    background-color: yellow;
+    background-color: gray;
     padding: 10px;
+    color: white;
 }
 
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-}
 
 .container ul{
     display: flex;
