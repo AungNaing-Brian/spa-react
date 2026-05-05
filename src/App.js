@@ -25,7 +25,7 @@ function App() {
       <Navbar setShowModal={setShowModal}></Navbar>
       <Postslist post={posts}/>
       { showModal &&
-        <Modal danger ={false}>
+        <Modal danger>
         <h1>Zoom class is available now.</h1>
         <p>Feel free to <a href='#'>Join</a> here.</p>
         <button onClick={()=>setShowModal(false)}>close</button>
