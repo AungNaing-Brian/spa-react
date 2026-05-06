@@ -13,7 +13,7 @@ export default function Navbar({setShowModal}) {
                     Posts
                 </li>
                 <li onClick={()=>setShowModal(true)}>
-                    Sing In
+                    Create Post
                 </li>
             </ul>
         </div>
