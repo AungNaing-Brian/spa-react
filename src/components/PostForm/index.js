@@ -5,8 +5,9 @@ import { useState } from 'react';
 export default function Index() {
 
     let [title, setTitle] = useState("")
-    let onChangeHandler= (e) => {
-        setTitle(e.target.value);
+    let resetForm = () => {
+        setTitle('');
+        console.log("updated Successfully")
     }
 
   return (
@@ -16,9 +17,10 @@ export default function Index() {
         <label>
             Title
         </label>
-        <input type='text' onChange={onChangeHandler}></input>
+        <input type='text' onChange={(e)=>setTitle(e.target.value)} value={title}></input>
     </div>
     <p>{title}</p>
+    <button type='button' onClick={resetForm}>reset Form</button>
     <div className='form-control'>
         <button>Post Now</button>
     </div>
