@@ -1,8 +1,9 @@
 import './App.css';
 import { useState } from 'react';
 import Navbar from './components/Navbar/index';
-import Postslist from './components/Postslist';
-import Modal from './components/Modal'
+import Postslist from './components/Postslist/index';
+import Modal from './components/Modal/index';
+import PostForm from './components/PostForm/index';
 
 function App() {
   let [showModal,setShowModal] = useState(false);
@@ -25,12 +26,11 @@ function App() {
       <Navbar setShowModal={setShowModal}></Navbar>
       <Postslist post={posts}/>
       { showModal &&
-        <Modal danger>
-        <h1>Zoom class is available now.</h1>
-        <p>Feel free to <a href='#'>Join</a> here.</p>
-        <button onClick={()=>setShowModal(false)}>close</button>
+        <Modal setShowModal={setShowModal}>
+        <PostForm/>
       </Modal>
       }
+      
       
     </>
   );
