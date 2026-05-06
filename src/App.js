@@ -14,20 +14,20 @@ function App() {
     {
       id: 2,
       title: 'second post',
-    },
-    {
-      id: 3,
-      title: 'third post'
-    },
+    }
   ]);
 
+  let addPost = (post) =>{
+      setPosts((prevState=>[...prevState,post]))
+      setShowModal(false);
+  }
   return (
     <>
       <Navbar setShowModal={setShowModal}></Navbar>
       <Postslist post={posts}/>
       { showModal &&
         <Modal setShowModal={setShowModal}>
-        <PostForm/>
+        <PostForm addPost={addPost}/>
       </Modal>
       }
       
